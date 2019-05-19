@@ -13,6 +13,13 @@ const jwt = require('jsonwebtoken')
 // 引入passport模块，验证token
 const passport = require('passport')
 
+router.get('/', (req, res, next) => {
+ res.json({success:'yes'})
+
+})
+
+
+
 
 // 用户/老师注册接口
 // 接口维护人：平昔
