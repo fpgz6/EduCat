@@ -83,5 +83,19 @@ router.get('/userInfo',passport.authenticate("jwt",{session:false}),(req,res,nex
 
 
 
+// 测试接口
+// 接口维护人：平昔
+// 维护时间：2019年5月18日
+router.get('/test',(req,res,next)=>{
+    res.json({
+      A:'A'
+    })
+})
+
+
+
+
+
+
 
 module.exports = router;
