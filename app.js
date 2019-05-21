@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //导入mysq配置文件
-const connection = require('./config/mysql');
+const {connection,text} = require('./config/mysql');
 
 app.get('/', function (req, res) {
   res.send('EduCat')
@@ -62,7 +62,7 @@ connection.connect(function (err) {
     console.log('[query] - :' + err);
     return;
   }
-  console.log('[connection connect]  succeed!'); //如果连接成功 控制台输出 success 了
+  console.log(text); //如果连接成功 控制台输出 success 了
 });
 
 
